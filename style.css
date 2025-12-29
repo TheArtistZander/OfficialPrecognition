@@ -1,0 +1,297 @@
+/* --------------------------------------------------
+   FONTS — LEGIBLE + GOTHIC
+-------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:wght@300;400;600&display=swap');
+
+/* --------------------------------------------------
+   GLOBAL
+-------------------------------------------------- */
+body {
+    margin: 0;
+    padding: 0;
+    background: #000;
+    color: #b30000; /* gothic red */
+    font-family: 'Crimson Pro', serif;
+    font-size: 22px;        /* larger body text */
+    line-height: 1.7;       /* easier to read */
+    letter-spacing: 0.5px;
+}
+
+/* --------------------------------------------------
+   HEADINGS — CLEAN, GOTHIC, READABLE
+-------------------------------------------------- */
+h1, h2, h3 {
+    font-family: 'Cinzel', serif;
+    color: #b30000;
+    letter-spacing: 3px;
+    margin: 0 0 20px 0;
+}
+
+h1 {
+    font-size: 4.5rem;      /* bigger, dramatic */
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+/* --------------------------------------------------
+   TYPEWRITER EFFECT
+-------------------------------------------------- */
+.typewriter {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid #b30000;
+    box-sizing: border-box;
+    width: 0;
+    font-size: 4.5rem;      /* matches new h1 size */
+    animation: typing 3s steps(40, end) forwards,
+               blink .7s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink {
+    from, to { border-color: transparent }
+    50% { border-color: #b30000 }
+}
+
+/* --------------------------------------------------
+   LAYOUT
+-------------------------------------------------- */
+section {
+    padding: 60px 10%;
+}
+
+/* --------------------------------------------------
+   HERO SECTION
+-------------------------------------------------- */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    text-align: center;
+}
+
+/* --------------------------------------------------
+   GALLERY SECTION (CTA)
+-------------------------------------------------- */
+.gallery-section {
+    padding: 60px 10%;
+    text-align: center;
+}
+
+.gallery-section h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.gallery-cta {
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+    color: #b30000;
+    opacity: 0.8;
+}
+
+/* --------------------------------------------------
+   AUDIO CTA SECTION — CENTERED
+-------------------------------------------------- */
+.audio-cta {
+    padding: 80px 10%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   /* centers horizontally */
+    justify-content: center;
+}
+
+.audio-title {
+    font-size: 3.2rem;
+    margin-bottom: 10px;
+}
+
+.audio-subtitle {
+    font-size: 1.4rem;
+    color: #b30000;
+    opacity: 0.8;
+    margin-bottom: 40px;
+}
+
+/* Centered audio player */
+.audio-player {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;        /* centers the element */
+    outline: none;
+    filter: drop-shadow(0 0 10px #b30000);
+    border-radius: 6px;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .audio-title {
+        font-size: 2.4rem;
+    }
+
+    .audio-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .audio-player {
+        max-width: 100%;
+    }
+}
+
+/* GRID LAYOUT */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+/* IMAGE STYLING */
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+    border: 2px solid #330000;
+    border-radius: 6px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* HOVER EFFECT */
+.gallery-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #b30000;
+    border-color: #b30000;
+}
+
+/* MOBILE FRIENDLY */
+@media (max-width: 600px) {
+    .gallery-section h2 {
+        font-size: 2.2rem;
+    }
+
+    .gallery-cta {
+        font-size: 1.1rem;
+    }
+
+    .gallery-grid {
+        gap: 15px;
+    }
+}
+
+/* --------------------------------------------------
+   SOCIAL MEDIA NAV BAR
+-------------------------------------------------- */
+.social-nav {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px 0;
+    margin-top: 40px;
+}
+
+.social-link {
+    font-family: 'Cinzel', serif;
+    font-size: 1.6rem;
+    color: #b30000;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* Hover glow */
+.social-link:hover {
+    color: #ff1a1a;
+    text-shadow: 0 0 12px #b30000;
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+    .social-nav {
+        gap: 20px;
+    }
+
+    .social-link {
+        font-size: 1.3rem;
+    }
+}
+/* --------------------------------------------------
+   LYRICS PAGE
+-------------------------------------------------- */
+.lyrics-section {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.lyrics-title {
+    font-size: 3rem;
+    margin-bottom: 40px;
+    color: #b30000;
+    letter-spacing: 3px;
+}
+
+.lyrics-box {
+    max-width: 800px;
+    margin: 0 auto 60px auto;
+    padding: 40px;
+    background: #0a0a0a;
+    border: 1px solid #330000;
+    border-radius: 8px;
+    box-shadow: 0 0 20px #1a0000;
+}
+
+.song-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #b30000;
+    letter-spacing: 2px;
+}
+
+.lyrics {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: #b30000;
+    white-space: pre-line;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .lyrics-title {
+        font-size: 2.4rem;
+    }
+
+    .song-title {
+        font-size: 1.6rem;
+    }
+
+    .lyrics {
+        font-size: 1.1rem;
+    }
+
+    .lyrics-box {
+        padding: 25px;
+    }
+}
+
+
+/* --------------------------------------------------
+   FOOTER
+-------------------------------------------------- */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #0a0a0a;
+    border-top: 1px solid #330000;
+    color: #b30000;
+}
