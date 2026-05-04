@@ -284,6 +284,28 @@ section {
     }
 }
 
+.press-section {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.press-button {
+    display: inline-block;
+    padding: 12px 22px;
+    background-color: #111;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.2s ease;
+}
+
+.press-button:hover {
+    background-color: #333;
+    transform: translateY(-2px);
+}
+
 /* --------------------------------------------------
    MOBILE FIX FOR TYPEWRITER TEXT
 -------------------------------------------------- */
